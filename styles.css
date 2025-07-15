@@ -1,0 +1,13 @@
+/* Reset default browser styles for consistency across browsers */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Apply base font and background color to the entire body */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;/* Sets a clean, readable font */
+  background-color: #f7faff;/* Soft light blue background */
+  color: #333; /* Dark gray text color for readability */
+}
