@@ -11,3 +11,33 @@ body {
   background-color: #f7faff;/* Soft light blue background */
   color: #333; /* Dark gray text color for readability */
 }
+
+/* NAVIGATION BAR STYLES */
+nav {
+  background-color: #4f9da6;/* Blue-green background */
+  padding: 1rem 2rem;/* Padding inside navbar */
+  display: flex;/* Flexbox layout to arrange items */
+  justify-content: space-between;/* Space between logo and links */
+  align-items: center;/* Vertically center items */
+}
+
+/* Styles the logo in the navbar */
+.logo {
+  color: #fff;/* White text */
+  font-size: 1.5rem;/* Larger font size */
+  font-weight: bold;/* Bold text */
+}
+
+/* Style for the unordered list of navigation links */
+.nav-links {
+  list-style: none;/* Remove bullets */
+  display: flex;/* Arrange links in a row */
+  gap: 1.5rem; /* Space between links */
+}
+
+/* Style for individual anchor links */
+.nav-links a {
+  text-decoration: none;/* Remove underline */
+  color: white; /* White link color */
+  font-weight: 500;/* Slightly bold text */
+}
