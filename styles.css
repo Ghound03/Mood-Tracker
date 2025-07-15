@@ -41,3 +41,22 @@ nav {
   color: white; /* White link color */
   font-weight: 500;/* Slightly bold text */
 }
+
+/* HERO SECTION STYLES */
+.hero {
+  padding: 5rem 2rem;/* Space around the content */
+  text-align: center;/* Center-align text */
+  background: linear-gradient(135deg, #a8edea, #fed6e3);/* Gradient background for a soft, cheerful look */
+}
+
+.hero h1 {
+  font-size: 2.5rem; /* Large heading text */
+  margin-bottom: 1rem;/* Space below the heading */
+}
+
+.hero p {
+  font-size: 1.2rem;/* Medium text size for the paragraph */
+  margin-bottom: 2rem;/* Space below paragraph */
+  max-width: 600px;/* Limit line length */
+  margin-inline: auto;/* Center the paragraph horizontally */
+}
