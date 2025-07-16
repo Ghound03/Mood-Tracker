@@ -61,6 +61,43 @@ nav {
   margin-inline: auto;/* Center the paragraph horizontally */
 }
 
+/* VIDEO SECTION STYLES */
+.video-section {
+  text-align: center;
+  padding: 2rem;
+}
+
+.video-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.video-section p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Responsive video container */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  max-width: 800px;
+  margin: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
 /* Button style for 'Get Started' link */
 .btn {
   background-color: #4f9da6;/* Button color same as navbar */
@@ -87,4 +124,23 @@ footer {
   bottom: 0;
   width: 100%;
   /* Full width */
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 600px) {
+  /* When screen width is 600px or less */
+
+  .nav-links {
+    flex-direction: column;/* Stack links vertically */
+    gap: 0.5rem; /* Less space between links */
+    margin-top: 1rem;/* Space above the links */
+  }
+
+  .hero h1 {
+    font-size: 2rem; /* Slightly smaller heading for small screens */
+  }
+
+  .btn {
+    padding: 0.6rem 1.2rem;/* Smaller padding for mobile */
+  }
 }
