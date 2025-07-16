@@ -60,3 +60,31 @@ nav {
   max-width: 600px;/* Limit line length */
   margin-inline: auto;/* Center the paragraph horizontally */
 }
+
+/* Button style for 'Get Started' link */
+.btn {
+  background-color: #4f9da6;/* Button color same as navbar */
+  color: white;/* White text */
+  padding: 0.75rem 1.5rem;/* Padding inside button */
+  border-radius: 30px;/* Rounded corners */
+  text-decoration: none;/* No underline */
+  font-size: 1rem;/* Regular size text */
+  transition: background 0.3s;/* Smooth hover effect */
+}
+
+/* Hover effect for button */
+.btn:hover {
+  background-color: #3a7f86;/* Darker blue-green on hover */
+}
+
+/* FOOTER STYLES */
+footer {
+  background-color: #4f9da6;/* Match navbar */
+  color: white;/* White text */
+  text-align: center;/* Center text */
+  padding: 1rem;/* Space inside footer */
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  /* Full width */
+}
