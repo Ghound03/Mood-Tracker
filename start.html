@@ -43,13 +43,33 @@
   </nav>
 
 
-    <!-- Page header styled with a class 'hero' -->
+  <!-- Page header styled with a class 'hero' -->
   <header class="hero">
 
     <!-- Section containing the user input form -->
     <section class="form-section">
       <!-- Main heading of the section -->
       <h1>Tell us a little about you</h1>
+
+
+        <!-- Label for age selection dropdown -->
+        <label >Select your age:</label><br/>
+
+        <!-- Dropdown menu for selecting age group -->
+        <select required>
+          <!-- Default placeholder option -->
+          <option value="">--Please choose--</option>
+          <!-- Option for users under 18 -->
+          <option value="Under 18">Under 18</option>
+          <!-- Option for users aged 18–24 -->
+          <option value="18-24">18–24</option>
+          <!-- Option for users aged 25–34 -->
+          <option value="25-34">25–34</option>
+          <!-- Option for users aged 35–44 -->
+          <option value="35-44">35–44</option>
+          <!-- Option for users aged 45 and above -->
+          <option value="45+">45+</option>
+        </select><br/><br/>
 
         <!-- Label for gender selection -->
         <label>Select your gender:</label><br/>
