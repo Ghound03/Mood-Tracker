@@ -159,3 +159,8 @@ footer {
   border-radius: 20px;/* Round the corners of the container with a radius of 20px 
      to make it look softer and more modern */
 }
+
+/* Style for all radio input elements */
+input[type="radio"] {
+  margin-right: 0.5rem;/* Adds space to the right of each radio button */
+}
