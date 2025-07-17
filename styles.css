@@ -63,39 +63,39 @@ nav {
 
 /* VIDEO SECTION STYLES */
 .video-section {
-  text-align: center;
-  padding: 2rem;
+  text-align: center;/* Center-aligns the content (like heading, paragraph, and video) horizontally */
+  padding: 2rem;/* Adds spacing inside the section (top, right, bottom, left) to separate it from other content */
 }
 
 .video-section h2 {
-  font-size: 1.8rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.8rem;/* Sets a larger font size for the section heading */
+  margin-bottom: 0.5rem;/* Adds spacing below the heading to separate it from the paragraph */
 }
 
 .video-section p {
-  font-size: 1rem;
-  margin-bottom: 1.5rem;
+  font-size: 1rem;/* Sets the font size for the descriptive paragraph under the heading */
+  margin-bottom: 1.5rem;/* Adds more space below the paragraph before the video starts */
 }
 
 /* Responsive video container */
 .video-container {
-  position: relative;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio */
-  height: 0;
-  overflow: hidden;
-  max-width: 800px;
-  margin: auto;
-  border-radius: 15px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  position: relative;/* Establishes a positioning context so that absolutely positioned children are relative to this container */
+  padding-bottom: 56.25%;/* Creates a dynamic height based on the width to maintain a 16:9 aspect ratio (9/16 = 0.5625 or 56.25%) */
+  height: 0;/* Sets the initial height to 0; the actual height comes from padding-bottom */
+  overflow: hidden;/* Ensures any overflowing content is hidden */
+  max-width: 800px;/* Limits the maximum width of the video container for better design control on large screens */
+  margin: auto;/* Horizontally centers the container in its parent */
+  border-radius: 15px;/* Rounds the corners of the video container */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);/* Adds a soft shadow for depth and visual appeal */
 }
 
 .video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
+  position: absolute; /* Removes the iframe from the normal flow and positions it inside the container */
+  top: 0;/* Aligns the top edge of the iframe to the top of the container */
+  left: 0;/* Aligns the left edge of the iframe to the left of the container */
+  width: 100%;/* Makes the iframe span the entire width of the container */
+  height: 100%;/* Makes the iframe span the entire height of the container */
+  border: none;/* Removes the default border around the iframe */
 }
 
 /* Button style for 'Get Started' link */
@@ -143,4 +143,19 @@ footer {
   .btn {
     padding: 0.6rem 1.2rem;/* Smaller padding for mobile */
   }
+}
+
+
+/* This section styles the mood form and its elements */
+.form-section {
+  background: linear-gradient(135deg, #fceff9, #e0f7fa);/* Apply a linear gradient background at a 135-degree angle,
+     transitioning from a soft pink (#fceff9) to a light teal (#e0f7fa) */
+  padding: 3rem 2rem;/* Add padding: 3rem (top & bottom) and 2rem (left & right) 
+     to create space inside the container around its content */
+  max-width: 600px;  /* Set the maximum width of the container to 600px,
+     so it doesn't stretch too wide on larger screens */
+  margin: auto;/* Center the container horizontally by setting left and right margins to 'auto' */
+  text-align: center; /* Center-align the text and inline elements inside this container */
+  border-radius: 20px;/* Round the corners of the container with a radius of 20px 
+     to make it look softer and more modern */
 }
