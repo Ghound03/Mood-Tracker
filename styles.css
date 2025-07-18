@@ -164,3 +164,11 @@ footer {
 input[type="radio"] {
   margin-right: 0.5rem;/* Adds space to the right of each radio button */
 }
+
+/* Style for the feedback message shown after form submission */
+.feedback {
+  margin-top: 1.5rem;          /* Adds spacing above the feedback message */
+  font-weight: bold;           /* Makes the feedback text bold */
+  color: #4f9da6;              /* Sets a soft teal color for the text */
+  font-size: 1.2rem;           /* Increases the font size slightly */
+}
