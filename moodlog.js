@@ -1,43 +1,63 @@
 // Wait for the entire HTML document to be fully loaded and parsed
 document.addEventListener("DOMContentLoaded", () => {
 
-  //  Get the welcome message element 
-  const welcomeMessage = document.getElementById("welcomeMessage");
+// Get the mood form element by its ID 
+const moodForm = document.getElementById("moodForm");
 
-  //  Retrieve the user's age from localStorage 
-  const age = localStorage.getItem("userAge");
+//  Get the welcome message element 
+const welcomeMessage = document.getElementById("welcomeMessage");
 
-  //  Retrieve the user's gender from localStorage 
-  const gender = localStorage.getItem("userGender");
+//  Retrieve the user's age from localStorage 
+const age = localStorage.getItem("userAge");
 
-  // If both age and gender data are found in localStorage, display them as a welcome message
-  if (age && gender) {
-    welcomeMessage.textContent = `Welcome! Age: ${age}, Gender: ${gender}`;
-  }
+//  Retrieve the user's gender from localStorage 
+const gender = localStorage.getItem("userGender");
 
-  // Define a function to get mood history stored in localStorage
-  // Returns an array of mood entries, or an empty array if none exists
-  function getMoodHistory() {
-    const stored = localStorage.getItem("moodEntries"); 
-    return stored ? JSON.parse(stored) : []; 
-  }
+// If both age and gender data are found in localStorage, display them as a welcome message
+if (age && gender) {
+ welcomeMessage.textContent = `Welcome! Age: ${age}, Gender: ${gender}`;
+}
 
-  // Define a function to save a new mood entry to localStorage
-  function saveMood(mood, comment) {
-    const history = getMoodHistory(); // Load existing mood history
+// Define a function to get mood history stored in localStorage
+// Returns an array of mood entries, or an empty array if none exists
+function getMoodHistory() {
+const stored = localStorage.getItem("moodEntries"); 
+return stored ? JSON.parse(stored) : []; 
+}
 
-    // Create a new entry object with mood, comment, and the current date/time
-    const entry = {
-      mood: mood,                          
-      comment: comment,                       
-      time: new Date().toLocaleString()       
-    };
+// Define a function to save a new mood entry to localStorage
+function saveMood(mood, comment) {
+const history = getMoodHistory(); // Load existing mood history
 
-    history.push(entry); // Add the new entry to the history array
+// Create a new entry object with mood, comment, and the current date/time
+const entry = {
+mood: mood,                          
+comment: comment,                       
+time: new Date().toLocaleString()       
+};
 
-    // Save the updated array back to localStorage as a JSON string
-    localStorage.setItem("moodEntries", JSON.stringify(history));
-  }
+history.push(entry); // Add the new entry to the history array
+
+// Save the updated array back to localStorage as a JSON string
+localStorage.setItem("moodEntries", JSON.stringify(history));
+}
+
+// Add an event listener for when the mood form is submitted
+moodForm.addEventListener("submit",function(e) {
+e.preventDefault(); 
+
+// Find the selected mood radio input and get its value 
+const selectedMood= document.querySelector('input[name="mood"]:checked').value;
+
+// Get the text entered into the comment textarea, trimming leading/trailing whitespace
+const comment= document.getElementById("comment").value.trim();
+
+// Save the selected mood and optional comment to localStorage
+saveMood(selectedMood,comment);
+
+// Reset the form so it's ready for the next entry
+moodForm.reset();
+  });
 
 
 });

@@ -29,17 +29,17 @@
       <h1>Log Your Mood</h1> 
       <h2 id="welcomeMessage"></h2> 
 
-      <form> 
+      <form id="moodForm"> <!-- Form for mood logging -->
 
         <!-- Mood selection using radio buttons and emojis -->
         <label>Select your mood:</label><br /> 
-        <label><input type="radio" value="😊" required> Happy 😊</label><br /> 
-        <label><input type="radio" value="😔"> Sad 😔</label><br /> 
-        <label><input type="radio" value="😠"> Angry 😠</label><br /> 
-        <label><input type="radio" value="😴"> Tired 😴</label><br /><br /> 
+        <label><input type="radio" name="mood" value="😊" required> Happy 😊</label><br /> 
+        <label><input type="radio" name="mood" value="😔"> Sad 😔</label><br /> 
+        <label><input type="radio" name="mood" value="😠"> Angry 😠</label><br /> 
+        <label><input type="radio" name="mood" value="😴"> Tired 😴</label><br /><br /> 
 
         <label >Any thoughts?</label><br /> <!-- Label for comment box -->
-        <textarea rows="4" cols="50" placeholder="Write something..."></textarea><br /><br />
+        <textarea id="comment" rows="4" cols="50" placeholder="Write something..."></textarea><br /><br />
 
         <!-- Submit button for the form -->
         <button type="submit" class="btn">Submit Mood</button>
