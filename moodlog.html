@@ -38,14 +38,16 @@
         <label><input type="radio" name="mood" value="😠"> Angry 😠</label><br /> 
         <label><input type="radio" name="mood" value="😴"> Tired 😴</label><br /><br /> 
 
-        <label >Any thoughts?</label><br /> <!-- Label for comment box -->
-        <textarea id="comment" rows="4" cols="50" placeholder="Write something..."></textarea><br /><br />
+        <label for="comment">Any thoughts?</label><br /> <!-- Label for comment box -->
+        <textarea id="comment" name="comment" rows="4" cols="50" placeholder="Write something..."></textarea><br /><br />
 
         <!-- Submit button for the form -->
         <button type="submit" class="btn">Submit Mood</button>
 
       </form>
 
+      <!-- Feedback section that appears after form submission -->
+      <div id="feedback" class="feedback"></div>
     </section> 
 
   </header> 

@@ -4,6 +4,9 @@ document.addEventListener("DOMContentLoaded", () => {
 // Get the mood form element by its ID 
 const moodForm = document.getElementById("moodForm");
 
+// Get the element where feedback will be displayed 
+const feedback = document.getElementById("feedback");
+
 //  Get the welcome message element 
 const welcomeMessage = document.getElementById("welcomeMessage");
 
@@ -54,6 +57,15 @@ const comment= document.getElementById("comment").value.trim();
 
 // Save the selected mood and optional comment to localStorage
 saveMood(selectedMood,comment);
+
+// Build a feedback message to show the user that their mood was saved
+let message = ` Mood saved: <strong>${selectedMood}</strong>`;
+if (comment) {
+message += `<br /> Note: "${comment}"`; 
+}
+
+// Display the feedback message in the feedback element 
+feedback.innerHTML = message;
 
 // Reset the form so it's ready for the next entry
 moodForm.reset();
