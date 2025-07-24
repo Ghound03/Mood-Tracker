@@ -162,7 +162,7 @@ footer {
 
 /* Style for all radio input elements */
 input[type="radio"] {
-  margin-right: 0.5rem;/* Adds space to the right of each radio button */
+margin-right: 0.5rem;/* Adds space to the right of each radio button */
 }
 
 /* Style for the feedback message shown after form submission */
@@ -171,4 +171,35 @@ input[type="radio"] {
   font-weight: bold;           /* Makes the feedback text bold */
   color: #4f9da6;              /* Sets a soft teal color for the text */
   font-size: 1.2rem;           /* Increases the font size slightly */
+}
+
+/* HISTORY TABLE STYLES */
+/* Target the table with class 'mood-table' */
+.mood-table {
+width: 100%;
+border-collapse: collapse;
+margin-top: 2rem;
+
+}
+
+/* Target all table headers and data cells */
+.mood-table th,
+.mood-table td {
+border: 1px solid #ccc; 
+padding: 1rem;
+text-align: center;
+
+}
+
+/* Style for the header row */
+.mood-table th {
+background-color: #4f9da6; 
+color: white;
+
+}
+
+/* Style for alternating (even-numbered) table rows */
+.mood-table tr:nth-child(even) {
+background-color: #f2f2f2; 
+
 }
