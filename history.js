@@ -52,4 +52,21 @@ table.appendChild(row);
 //Finally, add the completed table into the historyList div on the page
 historyList.appendChild(table);
 
+// Add a click event listener to the "Clear History" button
+clearBtn.addEventListener("click",() => {
+
+// Ask the user to confirm before deleting the mood history
+const confirmDelete= confirm("Are you sure you want to clear all mood entries?");
+
+// If the user confirms deletion it removes the mood entries from localStorage
+if (confirmDelete) {
+      
+localStorage.removeItem("moodEntries");
+
+// Replace the table with a message saying all entries were cleared
+historyList.innerHTML= "<p>🗑️ All mood history has been cleared.</p>";
+}
+
+});
+
 });
