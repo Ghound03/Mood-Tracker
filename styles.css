@@ -12,6 +12,7 @@ body {
   color: #333; /* Dark gray text color for readability */
 }
 
+
 /* NAVIGATION BAR STYLES */
 nav {
   background-color: #4f9da6;/* Blue-green background */
@@ -126,25 +127,76 @@ footer {
   /* Full width */
 }
 
-/* RESPONSIVE DESIGN */
-@media (max-width: 600px) {
-  /* When screen width is 600px or less */
+/* Tablet: max-width 900px */
+@media (max-width: 900px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+  
+  .hero p {
+    font-size: 1.1rem;
+    padding: 0 1rem;
+  }
 
   .nav-links {
-    flex-direction: column;/* Stack links vertically */
-    gap: 0.5rem; /* Less space between links */
-    margin-top: 1rem;/* Space above the links */
+    gap: 1rem;
   }
 
-  .hero h1 {
-    font-size: 2rem; /* Slightly smaller heading for small screens */
+  .form-section {
+    padding: 2rem 1rem;
   }
 
-  .btn {
-    padding: 0.6rem 1.2rem;/* Smaller padding for mobile */
+  .about-img {
+    max-width: 80%;
   }
 }
 
+/* Mobile: max-width 600px */
+@media (max-width: 600px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .nav-links a {
+    font-size: 0.9rem;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .form-section {
+    padding: 1.5rem 1rem;
+  }
+
+  .mood-table th,
+  .mood-table td {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .about-img {
+    max-width: 90%;
+  }
+
+  /* Make tables scrollable horizontally on very small screens */
+  .mood-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
 
 /* This section styles the mood form and its elements */
 .form-section {
@@ -202,4 +254,26 @@ color: white;
 .mood-table tr:nth-child(even) {
 background-color: #f2f2f2; 
 
+}
+
+/* Remove bullets from lists inside .about-section  */
+.about-section ul {
+  list-style: none;     
+  padding-left: 0;      
+  margin: 1rem 0;       
+}
+
+/* Add space between items to keep it readable */
+.about-section ul li {
+  margin-bottom: 0.5rem;
+}
+
+.about-img {
+  max-width: 600px;       
+  height: auto;          
+  display: block;        
+  margin: 1rem auto;     
+  border-radius: 15px;   
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+  width : 100%; /* Ensures the image is responsive */ 
 }
