@@ -4,6 +4,9 @@ document.addEventListener("DOMContentLoaded", () => {
 //Get the HTML element that will display the list of mood entries
 const historyList= document.getElementById("historyList");
 
+// Get the "Clear History" button element
+const clearBtn = document.getElementById("clearHistoryBtn");
+
 //Try to get the saved mood entries from localStorage
 const stored= localStorage.getItem("moodEntries");
 
