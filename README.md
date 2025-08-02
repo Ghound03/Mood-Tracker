@@ -32,6 +32,10 @@ Users can log how they feel each day, add a short note, and view a history of al
 
 <!-- Clear list of what I used and why -->
 
+
+<!-- Git Hub -->
+https://github.com/Ghound03/Mood-Tracker.git
+
 ---
 
 ## 📂 Project Structure
@@ -46,3 +50,4 @@ script.js          # JavaScript for form submission & saving moods
 history.js         # JavaScript to display saved mood history
 start.js           # JavaScript for the submission of age and gender
 README.md          # This file
+
